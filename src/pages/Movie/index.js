@@ -1,10 +1,11 @@
 import api from "../../services/api";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./movie_detail.css";
 
 
 // movie/{movie_id}
-function Movies() {
+function Movie() {
     const { id } = useParams();
     const [movie, setMovie] = useState({});
     const [loading, setLoading] = useState(true);
@@ -56,8 +57,17 @@ function Movies() {
             <span>{movie.overview}</span>
 
             <strong>Avaliação: {movie.vote_average} / 10</strong>
+
+            <div className="buttons-area">
+                <button>Salvar</button>
+                <button>
+                    <a href="#">
+                        Trailer
+                    </a>
+                </button>
+            </div>
         </div>
     )
 }
 
-export default Movies;
+export default Movie;

@@ -50,7 +50,7 @@ function Home() {
                         <article key={movie.id}>
                             <strong>{movie.title}</strong>
                             <img src={`https://media.themoviedb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
-                            <Link to={`/movies/${movie.id}`} >Acessar</Link>
+                            <Link to={`/movie/${movie.id}`} >Acessar</Link>
                         </article>
                     )
                 })}

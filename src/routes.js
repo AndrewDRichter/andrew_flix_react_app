@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Movies from "./pages/Movies";
+import Movie from "./pages/Movie";
 import Header from "./components/Header";
 import Favorites from "./pages/Favorites";
 import Error from "./pages/Error";
@@ -11,7 +11,7 @@ function AppRoutes() {
             <Header />
             <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/movies/:id' element={<Movies />} />
+                <Route path='/movie/:id' element={<Movie />} />
                 <Route path='/favorites' element={<Favorites />} />
 
                 <Route path="*" element={<Error />} />
