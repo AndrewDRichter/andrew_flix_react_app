@@ -1,6 +1,7 @@
 import api from "../../services/api";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 import "./movie_detail.css";
 
 
@@ -52,13 +53,13 @@ function Movie() {
         const hasMovie = savedMovies.some((savedMovie) => savedMovie.id === movie.id)
 
         if (hasMovie) {
-            alert("Este filme já foi salvo.")
+            toast.warn("Este filme já foi salvo.")
             return;
         }
 
         savedMovies.push(movie);
         localStorage.setItem("@andrewflix", JSON.stringify(savedMovies));
-        alert("Filme salvo.")
+        toast.success("Filme salvo.")
     }
 
 
