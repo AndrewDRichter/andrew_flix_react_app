@@ -56,7 +56,7 @@ function Movie() {
             <h3>Sinopse</h3>
             <span>{movie.overview}</span>
 
-            <strong>Avaliação: {movie.vote_average} / 10</strong>
+            <strong>Avaliação: {parseFloat(movie.vote_average).toFixed(2)} / 10</strong>
 
             <div className="buttons-area">
                 <button>Salvar</button>
